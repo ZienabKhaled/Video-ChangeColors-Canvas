@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="a" onchange="AAA()">Change me</h1>
+ 
+   RED<input type="range" name="Red" id="red" min="0" max="255" step="1" value="0"><br>
+   GREEN<input type="range" name="Green" id="green" min="0" max="255" step="1" value="0"><br>
+   BLUE<input type="range" name="Blue" id="blue" min="0" max="255" step="1" value="0">
+
+<script>
+   var txt=  document.getElementById("a");
+    function AAA (){
+    var red = document.getElementById("red").value;
+    var green = document.getElementById("green").value;
+    var blue = document.getElementById("blue").value;
+    let color = 'rgb('+red+','+green+','+blue+')';
+    txt.style.color = color ;
+
+    }
+    document.getElementById("red").addEventListener('input', AAA);
+    document.getElementById("green").addEventListener('input', AAA);
+    document.getElementById("blue").addEventListener('input', AAA);
+
+
+  
+
+</script>
+
+</body>
+</html>

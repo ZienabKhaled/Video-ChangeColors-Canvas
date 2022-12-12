@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+</head>
+<body>
+    <div class="video-container" controls id="video">
+        <video id="Video" width="1200" height="700" controls>
+            <source src="./Video.mp4" type="video/mp4">
+          </video><br>
+          <button onclick="playVid()"  type="button">Play Video</button>
+          <button onclick="pauseVid()" type="button">Pause Video</button>
+          <button onclick="back()" type="button"> << </button>
+          <button onclick="back_1s()" type="button"> < </button>
+          <button onclick="next_1s()" type="button"> > </button>
+          <button onclick="back()" type="button"> >> </button>
+          <br> 
+</div>
+
+<script>
+
+var vid = document.getElementById("Video"); 
+
+function playVid() { 
+  vid.play(); 
+} 
+
+function pauseVid() { 
+  vid.pause(); 
+} 
+function back(){
+    
+}
+
+</script>
+</body>
+</html>

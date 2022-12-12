@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <script>
+        window.MathJax = {
+          MathML: { extensions: ["mml3.js", "content-mathml.js"] },
+        };
+      </script>
+       <script
+       type="text/javascript"
+       async
+       src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=MML_HTMLorMML"
+     ></script>
+</head>
+<body>
+    <canvas id="triangle" width="300" height="300" style="background-color: rgb(231, 218, 218);">
+    </canvas>
+    <math>
+     <mi>c</mi>
+     <mo>=</mo>
+     <msqrt>
+        <msup>
+            <mi>a</mi>
+            <mn>2+</mn>
+        </msup>
+        <msup>
+            <mi>b</mi>
+            <mn>2</mn>
+        </msup>
+     </msqrt>
+    </math>
+    <script>
+        var canvas = document.getElementById("triangle")
+        const context = canvas.getContext("2d");
+    context.beginPath();
+    context.fillText(`a`,30,50);
+    context.fillText(`b`,110,50);
+    context.fillText(`c`,60,110);
+    context.fillStyle="red";
+    context.lineWidth=5;
+     context.moveTo(100, 100);
+     context.lineTo(100, 10);
+     context.lineTo(10, 100);
+     context.lineTo(100, 100);
+     context.fill();
+    </script>
+</body>
+</html>
